@@ -62,8 +62,8 @@
       try {
         const res = await fetch(URL_FUNCTION_SET, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(estado)
+          headers: { "Content-Type": "text/plain" },
+          body: estado
         });
 
         if (res.ok) {
