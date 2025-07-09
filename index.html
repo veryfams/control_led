@@ -47,7 +47,7 @@
   </div>
 
   <script>
-    const URL_FUNCTION_SET = "https://funciondelgemelo-hwdrbnbwg7b5dqej.eastus-01.azurewebsites.net/api/cambiarestado";
+    const URL_FUNCTION_SET = "https://funciondelgemelo-hwdrbnbwg7b5dqej.eastus-01.azurewebsites.net/api/enviarmensaje";
     const URL_FUNCTION_GET = "https://funciondelgemelo-hwdrbnbwg7b5dqej.eastus-01.azurewebsites.net/api/leergemelo";
 
     const statusLabel = document.querySelector("#status span.fw-bold");
@@ -63,7 +63,7 @@
         const res = await fetch(URL_FUNCTION_SET, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ estado })
+          body: JSON.stringify(estado)
         });
 
         if (res.ok) {
